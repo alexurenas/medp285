@@ -1,31 +1,371 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <title>aurena / medp285</title>
+        <meta name="viewport" content="width=device-width, initial-scale 1" />
+        <meta name="description" content="The web homepage for Media Production 285" />
 
-        <meta charset="utf-8" />
-        <title>My fIRST MEDP 285 PAGE</title>
-        <meta name="viewpoer" content="width=device-width, intial-scale=1" />
-        <meta name="description" content="Homepage for my web 1 class" />
-        <meta name="author" content="Alex" />
-    </head>
-<body>
+<!-- favicon -->
+        <!-- coming soon. -->
+        
+<!-- fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+            </head>
+
+<!-- css styles -->
+<style>
+    body { 
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        font-size:11px;
+        margin:0;
+        padding-bottom: 6em;
+        min-height: 100%;
+        background-color: #f0f0f0;
+    }
+
+    h1 { 
+        font-size: 20px
+        font-family: 'Poppins', sans-serif;
+        color: #7D4F41
+    }
+    
+      h2 { 
+        font-size: 15px
+        font-family: 'Poppins', sans-serif;
+        color: #7D4F41
+    }
+    
+    p { line-height: 1.5em 
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px
+    }
+    
+    nav { 
+        position: fixed;
+        left: 0;
+        top: 0px;
+        height: 3em;
+        width: 100%;
+        color: #fff;
+        background-color: rgba(99, 55, 42, 39);
+        margin: 0;
+        margin-top: -10px
+        padding: 0 0 10px 0;
+        z-index: 10;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    #myVideo {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    z-index: -100;
+}
+    
+    nav a { 
+    text-decoration: none;
+        color: white;
+    }
+    
+    nav a:hover { color: #b06f5b; }
+    nav ul {list-style-type: none}
+    nav ul li {
+        display: inline;
+        margin-top: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-right: 1px dotted #999;
+    }
+    nav ul li a img {vertical-align: text-bottom;}
+    nav ul li:last-child {border-right:none}
+    
+    #main {
+        margin-top: 3em;
+        padding: 0 2em 0 2em;
+        padding-bottom: 100px;
+        
+    }
+    
+    header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      video {
+        width: 100%;
+        height: 100%
+      }
+
+      section {
+        margin-top: 4em;
+      }
+    
+    footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+    }
+    
+/* dropdown menu css */
+    
+    .dropdown {
+          cursor: pointer;
+          position: relative;
+          display: inline-block;
+      }
+    
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          min-width: 10em;
+          background-color: #f9f9f9;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 20;
+      }
+    
+    .dropdown-content a {
+          background-color: rgba(99, 55, 42, 39);
+          color: white;
+          padding: .5em 2em .5em 1em;
+          text-decoration: none;
+          border-bottom: 1px solid gray;
+          display: block;
+    }
+    
+    .dropdown:hover .dropdown-content {
+          display: block;
+      }
+    
+    @media screen and (max-width: 600px) {
+        body {
+          background-color: black;
+          color: white;
+        }
+    }
+
+    </style>
+
+<!-- photo essay css -->
+    
+<style>
+    {box-sizing: border-box;}
+    body {font-family: 'Poppins', sans-serif}
+
+.   mySlides {display: none;}
+    img {vertical-align: middle;}
+
+    .slideshow-container {
+        max-width: 500px;
+        position: relative;
+        margin: auto;
+    }
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+
 <!-- navigation -->
-<nav id="nav">
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#news">News</a></li>
-<li><a href="contact">Contact</a></li>
-</ul>
-</nav>
-<header id="home">
-    <h1>Alexandra's MEDP 285 Homepage</h1>
+    <nav id="nav">
+        <ul class="navigation">
+            <li><a href="#home">home</a></li>
+            <li class="dropdown"><a>projects</a>
+                <div class="dropdown-content">
+                    <a href="slideshow.html">slideshow</a>
+                    <a href="video.html">film</a>
+            </div>
+            <li><a href="#about">about</a></li>
+            <li><a href="http://medp285au.wordpress.com/">blog</a></li>
+        </ul>
+    </nav>
+
+<div style="padding: 20px;">
+    
+<!-- header img -->
+    
+    <img src="/img/myname.svg" style="width: 100%;max-width: 1920px;margin: 2rem auto;">
+      
+<!-- header -->
+    <header id="home">
+        <h1><center>petals for armour.</center></h1>
     </header>
-    <hr />
-    <section id="about">
-        <h1>WORLD WIDE WEB</h1>
-        <p>The <em>World Wide Web</em> is an information space where documents ando ther web resources are identified by <u>Uniform Resource Lactros</u> (URLs), interlinked by hypertext links and accessible via the Internet...</p>
-    </section>
-    </body>
+
+<!-- about -->
+        <section id="about">
+            <h1><center>about.</center></h1>
+        <p><center>i'm alex. an aspiring writer and filmmaker. currently working on my own novel for nanowrimo.</center></p>
+            </section>
+    </div>
+    
+<!-- video project -->
+    <article>
+        <h2><center>defining a space - a visual project.</center></h2>
+        <title>defining a space</title>
+        <meta name="description"
+              content="My visual project for defining a particular space">
+        <meta name="author" content="Alex Urena">
+        <meta name="viewport" content="width=device-width, intitial-scale=1">
+    <body>
+        <center>
+            <video controls  poster="film/thumbnail/das.png" playsinline id="myVideo">
+            <source src="film/aspace.mp4" type="video/mp4">
+            <track src="film/dasEN.vtt" kind="captions" srclang="en" label="English" default />
+            </video></center>
+        </body>
+    </article>
+
+<!-- end of video project -->
+
+<!-- photo essay project -->
+    <h2><center>the internet is king - a photo essay.</center></h2>
+    
+<div class="slideshow-container">
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 10</div>
+  <img src="img/movies.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 10</div>
+  <img src="img/music%20stream.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 10</div>
+  <img src="img/books.JPG" style="width:100%">
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">4 / 10</div>
+  <img src="img/chat.JPG" style="width:100%">
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">5 / 10</div>
+  <img src="img/furniture.JPG" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 10</div>
+  <img src="img/skills.JPG" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 10</div>
+  <img src="img/groceries.JPG" style="width:100%">
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">8 / 10</div>
+  <img src="img/music.JPG" style="width:100%">
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">9 / 10</div>
+  <img src="img/delivery.JPG" style="width:100%">
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">10 / 10</div>
+  <img src="img/online%20encyclopedia.JPG" style="width:100%">
+</div>
+ 
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 5 seconds
+}
+</script>
+    
+    </div>
+<!-- end of photo essay project -->
+    
 </html>
