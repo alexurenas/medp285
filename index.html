@@ -1,371 +1,346 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>aurena / medp285</title>
-        <meta name="viewport" content="width=device-width, initial-scale 1" />
-        <meta name="description" content="The web homepage for Media Production 285" />
+<html lang="en">
 
-<!-- favicon -->
-        <!-- coming soon. -->
-        
-<!-- fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-            </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>The Heatologist</title>
 
-<!-- css styles -->
-<style>
-    body { 
-        font-family: 'Poppins', sans-serif;
-        position: relative;
-        font-size:11px;
-        margin:0;
-        padding-bottom: 6em;
-        min-height: 100%;
-        background-color: #f0f0f0;
-    }
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./Style.css" />
+  <link rel="stylesheet" href="./mobile-style.css">
+</head>
 
-    h1 { 
-        font-size: 20px
-        font-family: 'Poppins', sans-serif;
-        color: #7D4F41
-    }
-    
-      h2 { 
-        font-size: 15px
-        font-family: 'Poppins', sans-serif;
-        color: #7D4F41
-    }
-    
-    p { line-height: 1.5em 
-        font-family: 'Poppins', sans-serif;
-        font-size: 11px
-    }
-    
-    nav { 
-        position: fixed;
-        left: 0;
-        top: 0px;
-        height: 3em;
-        width: 100%;
-        color: #fff;
-        background-color: rgba(99, 55, 42, 39);
-        margin: 0;
-        margin-top: -10px
-        padding: 0 0 10px 0;
-        z-index: 10;
-    }
-    
-    img {
-        max-width: 100%;
-        height: auto;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    
-    #myVideo {
-    width: 500px;
-    height: 300px;
-    object-fit: cover;
-    z-index: -100;
-}
-    
-    nav a { 
-    text-decoration: none;
-        color: white;
-    }
-    
-    nav a:hover { color: #b06f5b; }
-    nav ul {list-style-type: none}
-    nav ul li {
-        display: inline;
-        margin-top: 0;
-        padding-left: 10px;
-        padding-right: 10px;
-        border-right: 1px dotted #999;
-    }
-    nav ul li a img {vertical-align: text-bottom;}
-    nav ul li:last-child {border-right:none}
-    
-    #main {
-        margin-top: 3em;
-        padding: 0 2em 0 2em;
-        padding-bottom: 100px;
-        
-    }
-    
-    header {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      video {
-        width: 100%;
-        height: 100%
-      }
-
-      section {
-        margin-top: 4em;
-      }
-    
-    footer {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-    }
-    
-/* dropdown menu css */
-    
-    .dropdown {
-          cursor: pointer;
-          position: relative;
-          display: inline-block;
-      }
-    
-      .dropdown-content {
-          display: none;
-          position: absolute;
-          min-width: 10em;
-          background-color: #f9f9f9;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 20;
-      }
-    
-    .dropdown-content a {
-          background-color: rgba(99, 55, 42, 39);
-          color: white;
-          padding: .5em 2em .5em 1em;
-          text-decoration: none;
-          border-bottom: 1px solid gray;
-          display: block;
-    }
-    
-    .dropdown:hover .dropdown-content {
-          display: block;
-      }
-    
-    @media screen and (max-width: 600px) {
-        body {
-          background-color: black;
-          color: white;
-        }
-    }
-
-    </style>
-
-<!-- photo essay css -->
-    
-<style>
-    {box-sizing: border-box;}
-    body {font-family: 'Poppins', sans-serif}
-
-.   mySlides {display: none;}
-    img {vertical-align: middle;}
-
-    .slideshow-container {
-        max-width: 500px;
-        position: relative;
-        margin: auto;
-    }
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-    .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-
-    @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-</style>
-
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-fire fa-2x mx-3"></i>THE HEATOLOGIST</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+          </button>
+          
 <!-- navigation -->
-    <nav id="nav">
-        <ul class="navigation">
-            <li><a href="#home">home</a></li>
-            <li class="dropdown"><a>projects</a>
-                <div class="dropdown-content">
-                    <a href="slideshow.html">slideshow</a>
-                    <a href="video.html">film</a>
-            </div>
-            <li><a href="#about">about</a></li>
-            <li><a href="http://medp285au.wordpress.com/">blog</a></li>
-        </ul>
-    </nav>
-
-<div style="padding: 20px;">
-    
-<!-- header img -->
-    
-    <img src="/img/myname.svg" style="width: 100%;max-width: 1920px;margin: 2rem auto;">
+          
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a href="#beginners" class="nav-link">BEGINNERS</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#intermediate" class="nav-link">INTERMEDIATE</a>
+            </li>
+            <li class="nav-item">
+              <a href="#expert" class="nav-link">EXPERT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
       
-<!-- header -->
-    <header id="home">
-        <h1><center>petals for armour.</center></h1>
-    </header>
+      
+<!-- end of navigation -->
 
-<!-- about -->
-        <section id="about">
-            <h1><center>about.</center></h1>
-        <p><center>i'm alex. an aspiring writer and filmmaker. currently working on my own novel for nanowrimo.</center></p>
-            </section>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-7 col-sm-12  text-white">
+          <h6>CALLING MY HEAT LOVERS</h6>
+          <h1>TAKE A SPICE ADVENTURE</h1>
+          <p>
+            Explore the beginner, intermediate and expert levels of spice to see which will get your mouth goin' crazy! - The Heatologist
+          </p>
+          <a href="#beginners" button class="btn btn-light px-5 py-2 primary-btn">
+            LET'S BEGIN
+            </a>
+        </div>
+        <div class="col-md-5 col-sm-12  h-25">
+          <img src="/img/flaming.png" alt="Flaming tongue" />
+        </div>
+      </div>
     </div>
+  </header>
+  <main>
+      
+<section class="section-4">
+      <div class="container text-center">
+        <h1 class="text-dark">Beginners</h1>
+        <p class="text-secondary">For those who are still trying spice out.</p>
+      </div>
+      </section>
+      
+<!-- beginner sauces -->
     
-<!-- video project -->
-    <article>
-        <h2><center>defining a space - a visual project.</center></h2>
-        <title>defining a space</title>
-        <meta name="description"
-              content="My visual project for defining a particular space">
-        <meta name="author" content="Alex Urena">
-        <meta name="viewport" content="width=device-width, intitial-scale=1">
-    <body>
-        <center>
-            <video controls  poster="film/thumbnail/das.png" playsinline id="myVideo">
-            <source src="film/aspace.mp4" type="video/mp4">
-            <track src="film/dasEN.vtt" kind="captions" srclang="en" label="English" default />
-            </video></center>
-        </body>
-    </article>
+      <section id="beginners">
+    <section class="section-1">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="/img/keith%20hot%20sauce.jpg" alt="keith's hot sauce" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>Keith's Chicken Sauce</h1>
+              <p class="pt-4">
+                <p>Flavor notes: Vinegar based. Dill, parsley, chives with smoked onions, garlic scapes and Vermont maple syrup along with zipper Serrano peppers and roasted red pepper.</p>
+                <p>Pairs with: Wings, fries, grilled cheese, pizza!</p>
+                 <p>
+                    <a href="https://www.amazon.com/Heatonist-Keiths-Chicken-Sauce/dp/B082YJ8LB8/ref=asc_df_B082YJ8LB8/?tag=hyprod-20&linkCode=df0&hvadid=459711061409&hvpos=&hvnetw=g&hvrand=13833709668700651994&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9060351&hvtargid=pla-944249495753&psc=1" button class="btn btn-dark px-5 py-2 primary-btn mb-5">Buy Here</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
+        <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="/img/cajohns.jpg" alt="cajohn's hot sauce" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>Cajohn's Tiki Bar Hot Sauce</h1>
+                            <p class="pt-4">
+                <p>Flavor notes: Vinegar based sweet Polynesian spice! Garlic, mango, papaya, pineapple, sweet soy sauce, brown sugar, chiles, lemon and chiles.</p>
+                <p>Pairs with: Chicken, pork, beef and has a dipping sauce for fries.</p>
 
-<!-- end of video project -->
+         <p>
+                    <a href="https://cajohns.com/store/index.php?route=product/product&product_id=285" button class="btn btn-dark px-5 py-2 primary-btn mb-5">Buy Here</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
+        <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="/img/yucateco.jpg" alt="yucataco bottle" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>El Yucateco</h1>
+                            <p class="pt-4">
+                <p>Flavor notes: Red habanero pepper, water, tomato and salt! It's also one of the most inexpensive options on my list!</p>
+                <p>Pairs with: Burritos, tacos, eggs, grilled cheese</p>
+                 <p>
+                    <a href="https://www.mercato.com/item/el-yucateco-hot-sauce-red-chile-habanero-4-fluid-ounces/109981?featuredStoreId=501&region_id=01582862&utm_source=google&utm_medium=cpc&utm_campaign=ML_PLA_US%20Regional%20Feed_Smart_Shopping&utm_content=&gclid=EAIaIQobChMI--HZjpnS7QIVDmyGCh3ISwOYEAQYAyABEgLJwfD_BwE" button class="btn btn-dark px-5 py-2 primary-btn mb-5">Buy Here</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+          </section>
+      
+<!-- end of beginners -->
+      
+<section class="section-4">
+      <div class="container text-center">
+        <h1 class="text-dark">Intermediate</h1>
+        <p class="text-secondary">For those who are still in the middle of the spice road.</p>
+      </div>
+      </section>
+      
+      
+<!-- intermediate -->
+      
+<section id="intermediate">
+    <section class="section-1">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="/img/torchbearer.jpg" alt="Torchbearer's Garlic Reaper Sauce" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>Torchbearer's Garlic Reaper Sauce</h1>
+              <p class="pt-4">
+                <p>Flavor notes: Oil base! Carolina Reaper (hot!), garlic, canola oil, lime juice, mustard and chili powder</p>
+                <p>Pairs with: Chicken, salmon, pizza, burritos</p>
+                 <p>
+                    <a href="https://www.torchbearersauces.com/product/garlic-reaper/" button class="btn btn-dark px-5 py-2 primary-btn mb-5">Buy Here</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
+        <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="/img/stargazer.jpg" alt="stargazer's pepper north hot sauce" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>Stargazer's Pepper North</h1>
+                            <p class="pt-4">
+            <p>Flavor: Jalapeño peppers, scotch bonnet peppers, ghost peppers (hot hot hot!), apple cider vinegar, maple syrup, garlic, lime juice, chipotle peppers</p>
+            <p>Pairs with: Lamb, pork, quinoa, burritos, tacos</p>
+                 <p>
+                    <a href="https://www.peppernorth.com/stargazer-hot-sauce" button class="btn btn-dark px-5 py-2 primary-btn mb-5">Buy Here</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
+        <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="/img/dawsons.jpg" alt="Dawson's original hot sauce" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>Dawson's Original Sauce</h1>
+                            <p class="pt-4">
+                <p>Flavor notes: Oil based! Cremini mushroom, chipotle pepper sauce, jalapeño pepper, red chili pepper, garlic, green chili pepper, extra virgin olive oil, sea salt</p>
+                <p>Pairs with: Tacos, chicken, soups, vegetables</p>
+                 <p>
+                    <a href="https://dawsonshotsauce.com/collections/hot-sauce/products/original-hot-hot-ones-sauce-7" button class="btn btn-dark px-5 py-2 primary-btn mb-5">Buy Here</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+          </section>
+      
+      
+<!-- intermediate end --> 
 
-<!-- photo essay project -->
-    <h2><center>the internet is king - a photo essay.</center></h2>
-    
-<div class="slideshow-container">
-    <div class="slideshow-container">
+<section class="section-4">
+      <div class="container text-center">
+        <h1 class="text-dark">Expert</h1>
+        <p class="text-secondary">For those who are a trying to get a little (A LOT) crazy.</p>
+      </div>
+      </section>
+      
+<!-- expert -->
+      
+<section id="expert">
+    <section class="section-1">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="/img/karma.jpg" alt="Karma's Burn After Eating" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>Karma Burn After Eating</h1>
+              <p class="pt-4">
+                <p>Flavor notes: Vinegar based! 7-Pot peppers, scorpion and ghost peppers as well as ajwain spice, white vinegar, ginger and turmeric.</p>
+                <p>Pairs with: Soup, pizza, lamb, chicken, pork</p>
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 10</div>
-  <img src="img/movies.jpg" style="width:100%">
-</div>
+                 <p>
+                    <a href="https://karmasauce.com/products/burn-after-eating" button class="btn btn-dark px-5 py-2 primary-btn mb-5">Buy Here</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
+        <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="/img/puckerbutt.jpg" alt="Puckerbutt Pepper Co.'s Chipotle eXpress" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>Puckerbutt Pepper Co.'s Chipotle eXpress</h1>
+                            <p class="pt-4">
+                <p>Flavor notes: Vinegar based! Pepper X peppers, honey, apple cider vinegar, lemon juice, distilled vinegar, kosher salt, chipotle powder, ginger</p>
+                <p>Pairs with: Short ribs, stews, beef, soups</p>
+                 <p>
+                    <a href="https://heatonist.com/products/puckerbutt-pepper-co-chipotle-xpress?variant=31838989942882" button class="btn btn-dark px-5 py-2 primary-btn mb-5">Buy Here</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
+        <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="/img/apollo.jpg" alt="Hot Ones' Final Dab Apollo" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>Hot Ones' Final Dab Apollo</h1>
+                            <p class="pt-4">
+                <p>Flavor notes: Vinegar based! Fresh, dried and distilled oil of The Apollo Pepper. Hottest pepper in the world!</p>
+                <p>Pairs with: Wings! Be careful with this one!</p>
+                 <p>
+                    <a href="https://heatonist.com/products/the-last-dab-apollo?variant=31838990499938" button class="btn btn-dark px-5 py-2 primary-btn mb-5">Buy Here</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+          </section>
+      
+      
+<!-- expert end --> 
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 10</div>
-  <img src="img/music%20stream.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 10</div>
-  <img src="img/books.JPG" style="width:100%">
-</div>
-    
-<div class="mySlides fade">
-  <div class="numbertext">4 / 10</div>
-  <img src="img/chat.JPG" style="width:100%">
-</div>
-    
-<div class="mySlides fade">
-  <div class="numbertext">5 / 10</div>
-  <img src="img/furniture.JPG" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">6 / 10</div>
-  <img src="img/skills.JPG" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">7 / 10</div>
-  <img src="img/groceries.JPG" style="width:100%">
-</div>
-    
-<div class="mySlides fade">
-  <div class="numbertext">8 / 10</div>
-  <img src="img/music.JPG" style="width:100%">
-</div>
-    
-<div class="mySlides fade">
-  <div class="numbertext">9 / 10</div>
-  <img src="img/delivery.JPG" style="width:100%">
-</div>
-    
-<div class="mySlides fade">
-  <div class="numbertext">10 / 10</div>
-  <img src="img/online%20encyclopedia.JPG" style="width:100%">
-</div>
- 
-</div>
-
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-</div>
-
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 5 seconds
-}
-</script>
-    
+  </main>
+  <footer>
+            <section id="about">
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">About Heatologist</h4>
+          <p class="text-muted">I want to create an online space where I can provide three different sauces to people at different levels. Some will be for the hot-sauce-curious like me and others for people who are familiar but want to try something other than what’s shelved in a commercial supermarket. They might not be able to find these flavors in Buffalo Wild Wings but they will hopefully know which flavor profiles they are into which makes sauce selection easier.</p>
+        </div>
+      </div>
     </div>
-<!-- end of photo essay project -->
-    
+      </section>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
+</body>
+
 </html>
